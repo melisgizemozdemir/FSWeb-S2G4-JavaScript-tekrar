@@ -41,7 +41,7 @@ function CemberinCevresi(yariCap) {
 
 
 function CemberinAlani(yariCap, pi) {
-  return alan =  pi * Math.pow(yariCap,2);
+  return pi * Math.pow(yariCap,2);
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,6 +64,11 @@ function CemberinAlani(yariCap, pi) {
 */
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
+
+
+
+
+// 3a çözümü
 
 const sayilar = [
   45, 856, 12.5, 63, 0.02, 154, 2, 54, 78, 61.7, 654, 26, 12.5, 63, 969, 152,
@@ -93,13 +98,10 @@ const sayilar = [
 ];
 
 
-// 3a çözümü
-
-
 let enkucuk = sayilar[0];
 let enbuyuk = sayilar[0];
 
-for(i=1; i < sayilar.length; i++){
+for(let i = 1; i < sayilar.length; i++){
 
   let sayi = sayilar[i];
 
@@ -140,9 +142,8 @@ const besyuzdenkucuksayilar = sayilar.filter(besyuzkucuk = element => element <5
 
 // 3e çözümü
 
-const siralisayilar = [...sayilar];
+const siralisayilar = [...besyuzdenkucuksayilar];
 siralisayilar.sort((a,b) => a - b);
-
 console.log(siralisayilar);
 
 // 3f çözümü
